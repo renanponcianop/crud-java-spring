@@ -1,75 +1,81 @@
-# Cadastro de veículos
+# Car registry
 
-## Informações importantes
+## Revelevant informations
 
-Projeto construido com Spring 2.4.5 e Java 11
+Build with Spring 2.4.5 e Java 11
+
+## Project Description
+
+This project was builded to develop a backend to a car registration at a store. 
+
+This is just a study project, feel free to get/change it as you want.
 
 ## Endpoints
 
 ```bash
 /veiculos
 Método: GET
-Objetivo: Retorna todos os carros cadastrados
+Objetivo: Get all cars
 ```
 ```bash
 /veiculos/{id}
 Método: GET
-Objetivo: Retorna as informações de um único carro pelo seu ID
+Objetivo: Get a car by it's ID
 ```
 ```bash
 /veiculos/find
 Método: GET
-Objetivo: Filtra os veículos cadastrados
+Objetivo: Make a search for specific car
 Parâmetros:
- vendidos= Boolean - True/False/Null - Exibe só os carros vendidos
- decada= Integer - Busca os carros de uma determinada década
- fabricante= String - Busca os carros por fabricante
- recentes= Boolean - True/False/Null - Exibe só os carros das ultimas 2 semanas
+ vendidos= Boolean - True/False/Null - Return just the sold cars.
+ decada= Integer - Search a car by a decade.
+ fabricante= String - Search cars by manufacturer
+ recentes= Boolean - True/False/Null - Shows only cars from the last 2 weeks
 ```
 ```bash
 /veiculos
 Método: POST
-Objetivo: Cria um carro
+Objetivo: Registry a new car
 Parâmetros: JSON:
 {
     "id": Integer - id ,
-    "veiculo": String - modelo,
-    "marca": String - fabricante,
-    "ano": Integer- ano,
-    "descricao": String - descricao,
-    "vendido": Boolean - true/false informa se o carro foi vendido
+    "veiculo": String - model,
+    "marca": String - manufacturer,
+    "ano": Integer- year,
+    "descricao": String - description,
+    "vendido": Boolean - true/false informs if the car was sold
 }
 ```
 ```bash
 /veiculos/{id}
 Método: PUT
-Objetivo: Altera todos os dados de um veículo
+Objetivo: Change all data for a vehicle
 Parâmetros: JSON:
 {
     "id": Integer - id ,
-    "veiculo": String - modelo,
-    "marca": String - fabricante,
-    "ano": Integer- ano,
-    "descricao": String - descricao,
-    "vendido": Boolean - true/false informa se o carro foi vendido
+    "veiculo": String - model,
+    "marca": String - manufacturer,
+    "ano": Integer- year,
+    "descricao": String - description,
+    "vendido": Boolean - true/false informs if the car was sold
 }
 ```
 ```bash
 /veiculos/{id}
 Método: PATCH
-Objetivo: Altera somente os dados enviados
+Objetivo: Change only sent data
 Parâmetros: JSON:
 {
     "id": Integer - id ,
-    "veiculo": String - modelo,
-    "marca": String - fabricante,
-    "ano": Integer- ano,
-    "descricao": String - descricao,
-    "vendido": Boolean - true/false informa se o carro foi vendido
+    "veiculo": String - model,
+    "marca": String - manufacturer,
+    "ano": Integer- year,
+    "descricao": String - description,
+    "vendido": Boolean - true/false informs if the car was sold
 }
 ```
 ```bash
 /veiculos/{id}
 Método: DELETE
-Objetivo: Deleta um veículo do banco
+Objetivo: Delete a vehicle from the bank
 ```
