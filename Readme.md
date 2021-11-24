@@ -1,6 +1,6 @@
 # Car registry
 
-## Revelevant informations
+## Relevant informations
 
  - **Java 11**
 -	**Spring Framework**
